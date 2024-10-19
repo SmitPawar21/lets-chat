@@ -17,6 +17,8 @@ export const Chatbot = () => {
     const messagesEndRef = useRef(null);
     const userInput = document.querySelector(".userInput");
 
+    GROQ_API_KEY = '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'
+
     const chat = async () => {
         const response = await reply(req.body.msg)
         db.createChat(req.user.emailId, response)
